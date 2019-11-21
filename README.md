@@ -1,1 +1,1 @@
-# testcafe-bdd-e2e-automation-framework
+# testcafe-e2e-automation-framework
