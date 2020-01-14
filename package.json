@@ -1,0 +1,27 @@
+{
+  "name": "testcafe-e2e-automation-framework",
+  "version": "0.1.0",
+  "author": "AHMED HAMADA",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "dotenv": "^6.1.0",
+    "exceljs": "^1.6.0",
+    "faker": "^4.1.0",
+    "testcafe": "^v1.1.2",
+    "testcafe-reporter-cucumber-json": "^4.0.0"
+  },
+  "devDependencies": {
+    "multiple-cucumber-html-reporter": "^1.13.2"
+  },
+  "scripts": {
+    "start": "PORT=9000 react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test-chrome-without-report": "testcafe chrome tests",
+    "tests-chrome-with-report": "testcafe chrome tests --reporter cucumber-json:reports/report.json --reporter-app-name='testcafe-e2e-automation-framework' --reporter-app-version='1.0'",
+    "regression-tests-with-report": "testcafe chrome tests --fixture-meta regression=true --reporter cucumber-json:reports/report.json --reporter-app-name='testcafe-e2e-automation-framework' --reporter-app-version='1.0'",
+    "reporter": "node utils/report-generator.js",
+    "eject": "react-scripts eject",
+    "lint": "eslint src/**.js"
+  }
+}

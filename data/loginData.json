@@ -1,0 +1,14 @@
+[
+  {
+    "role": "admin",
+    "success": true
+  },
+  {
+    "role": "invalidUserName",
+    "success": false
+  },
+  {
+    "role": "invalidPassword",
+    "success": false
+  }
+]
