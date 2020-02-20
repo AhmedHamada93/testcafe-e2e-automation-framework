@@ -6,13 +6,16 @@ const loginPage = new LoginPage();
 
 fixture('Login')
     .page(constants.getLoginPageURL())
-    .meta('regression', 'true')
-    .beforeEach(async t => {
-        await t.setTestSpeed(1);
-    });
+    .meta('regression', 'true');
+
+/**
+ * Login Test Scenarios
+ *  1. Login with valid userName and password.
+ *  2. Login with invalid userName and valid password.
+ *  3. Login with valid userName and invalid password.
+ */
 
 const loginTestData = require('../data/loginData');
-
 loginTestData.forEach(data => {
     test(`Login with ${data.role} should ${data.success ? 'success' : 'fail'}`, async t => {
         await t.useRole(userRoles[data.role]);

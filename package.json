@@ -15,13 +15,8 @@
     "multiple-cucumber-html-reporter": "^1.13.2"
   },
   "scripts": {
-    "start": "PORT=9000 react-app-rewired start",
-    "build": "react-app-rewired build",
-    "test-chrome-without-report": "testcafe chrome tests",
+    "tests-chrome-without-report": "testcafe chrome tests",
     "tests-chrome-with-report": "testcafe chrome tests --reporter cucumber-json:reports/report.json --reporter-app-name='testcafe-e2e-automation-framework' --reporter-app-version='1.0'",
-    "regression-tests-with-report": "testcafe chrome tests --fixture-meta regression=true --reporter cucumber-json:reports/report.json --reporter-app-name='testcafe-e2e-automation-framework' --reporter-app-version='1.0'",
-    "reporter": "node utils/report-generator.js",
-    "eject": "react-scripts eject",
-    "lint": "eslint src/**.js"
+    "regression-tests-with-report": "testcafe chrome tests --fixture-meta regression=true --reporter cucumber-json:reports/report.json --reporter-app-name='testcafe-e2e-automation-framework' --reporter-app-version='1.0'"
   }
 }

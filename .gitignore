@@ -1,4 +1,5 @@
 /node_modules
 .idea/
 /reports
+testcafe-reporter-cucumber-json.json
 .env

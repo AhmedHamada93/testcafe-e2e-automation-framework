@@ -1,7 +1,7 @@
 const createTestCafe = require('testcafe');
 let testcafe = null;
 let runner = null;
-const fs = require('fs');
+const {exec} = require('child_process');
 
 
 createTestCafe('localhost', 1335, 1336)
@@ -16,7 +16,7 @@ createTestCafe('localhost', 1335, 1336)
             ])
             .browsers(['chrome:headless'])
             .screenshots('reports/screenshots/', true)
-            .reporter(['cucumber-json'])
+            .reporter('cucumber-json', 'reports/report.json')
             .run({
                 skipJsErrors: true,
                 quarantineMode: false,
@@ -27,6 +27,9 @@ createTestCafe('localhost', 1335, 1336)
             });
     })
     .then(failedCount => {
+        console.log('############################');
         console.log('Tests failed: ' + failedCount);
+        console.log('############################');
+        exec('npm run reporter');
         testcafe.close();
     });
