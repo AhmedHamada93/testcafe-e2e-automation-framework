@@ -30,6 +30,6 @@ createTestCafe('localhost', 1335, 1336)
         console.log('############################');
         console.log('Tests failed: ' + failedCount);
         console.log('############################');
-        exec('npm run reporter');
+        exec('node utils/report-generator.js');
         testcafe.close();
     });
