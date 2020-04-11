@@ -4,7 +4,7 @@ report.generate({
     reportName: 'TestCafe Report',
     jsonDir: 'reports',
     reportPath: 'reports',
-    openReportInBrowser: true,
+    openReportInBrowser: false,
     disableLog: true,
     displayDuration: true,
     durationInMS: true,
