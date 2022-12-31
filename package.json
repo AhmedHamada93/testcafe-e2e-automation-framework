@@ -8,7 +8,7 @@
     "dotenv": "^6.1.0",
     "exceljs": "^1.6.0",
     "faker": "^4.1.0",
-    "testcafe": "^v1.1.2",
+    "testcafe": "^v1.20.1",
     "testcafe-reporter-cucumber-json": "^4.0.0"
   },
   "devDependencies": {
