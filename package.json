@@ -9,7 +9,7 @@
     "exceljs": "^1.6.0",
     "faker": "^4.1.0",
     "testcafe": "^v1.1.2",
-    "testcafe-reporter-cucumber-json": "^4.0.0"
+    "testcafe-reporter-cucumber-json": "^4.0.1"
   },
   "devDependencies": {
     "multiple-cucumber-html-reporter": "^1.13.2"
